@@ -1,0 +1,81 @@
+      * {box-sizing: border-box}
+      body {
+      font-family: Verdana, sans-serif;
+      margin:0;
+      background-color: #25282a;
+      }
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      margin-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      }
+      .image {
+      border-radius: 8px;
+      }
+      /* блок с подписью и точками */
+      .description {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      }
+      /* Подпись под изображением */
+      .text {
+      color: #ffffff;
+      font-size: 15px;
+      text-align: left;
+      }
+      /* Точки/маркеры/указатели */
+      .dot {
+      position: relative;
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 8px;
+      background-color: #71abff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+      .active {
+      background-color: #25282a;
+      border: 2px solid #71abff;
+      }
+      .dot:hover {
+      background-color: #ffffff;
+      }
+      .dot::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      }
+      @media (max-width: 700px) {
+            .description {
+                  display: flex;
+                  flex-direction: column-reverse;
+                  margin-top: 20px;
+                  gap: 20px;
+                  }
+            .dots {
+                  margin:auto;
+                  }                        
+          }
+      /* Выцветание анимации */
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
